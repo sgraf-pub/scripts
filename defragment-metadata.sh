@@ -1,7 +1,5 @@
 #!/bin/bash -x
 
-swapoff -a
-
 btrfs balance start -musage=0  /
 btrfs balance start -musage=80 /
 btrfs balance start -dusage=0  /
@@ -19,6 +17,4 @@ btrfs balance start -musage=80 /media/BACKUP
 btrfs balance start -dusage=0  /media/BACKUP
 btrfs balance start -dusage=20 /media/BACKUP
 mount -o remount,ro /media/BACKUP
-
-swapon -a
 

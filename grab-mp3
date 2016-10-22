@@ -1,0 +1,4 @@
+$ cat /etc/abcde.conf | grep -v -e '^#' -e '^$'
+LAMEOPTS="-V 0"
+CDPARANOIAOPTS="--disable-extra-paranoia"
+$ sudo abcde -d /dev/cdrom -o mp3 -x

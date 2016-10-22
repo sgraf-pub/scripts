@@ -1,0 +1,1 @@
+sudo -- sh -c "mount /dev/cdrom /media/DVD; vobcopy --large-file --output-dir /media/DATA/CDs_DVDs/ ; umount /media/DVD"

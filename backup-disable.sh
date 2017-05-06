@@ -1,6 +1,7 @@
 #!/bin/bash
 echo "umount /media/BACKUP/"
-sudo umount /media/BACKUP/
+umount /media/BACKUP/
+
 echo "luksClose ST320005  42AS"
 cryptsetup luksClose /dev/mapper/luks-7eab0ebc-615f-4758-839a-6e8c7211ca9c
 echo "luksClose WDC WD20  EARS-00MVWB0"

@@ -8,10 +8,3 @@ for disk in /dev/sd{b..g}; do
     sdparm --set STANDBY=1,SCT=36000 --save $disk
 done
 
-echo 'auto' > '/sys/bus/usb/devices/1-6.1.3/power/control'; 
-echo 'auto' > '/sys/bus/usb/devices/1-6.1.4/power/control'; 
-echo 'auto' > '/sys/bus/usb/devices/1-6.2/power/control'; 
-echo 'auto' > '/sys/bus/usb/devices/1-6.1.2/power/control'; 
-echo 'auto' > '/sys/bus/usb/devices/1-6.3/power/control'; 
-echo 'auto' > '/sys/bus/usb/devices/1-6.4/power/control'; 
-

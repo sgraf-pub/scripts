@@ -11,4 +11,4 @@ echo -n "$DISK_PASS" | cryptsetup luksOpen UUID=2e5ecaae-9ad9-4602-9ee8-f37b11e6
 echo "luksOpen SAMSUNG   HD203WI"
 echo -n "$DISK_PASS" | cryptsetup luksOpen UUID=7841eead-708a-4ce8-8716-7f1f0abce422 luks-7841eead-708a-4ce8-8716-7f1f0abce422 -d -
 echo "mount /media/BACKUP/ as R/O"
-mount /dev/mapper/luks-7eab0ebc-615f-4758-839a-6e8c7211ca9c /media/BACKUP -o ro
+mount /dev/mapper/luks-7eab0ebc-615f-4758-839a-6e8c7211ca9c /media/BACKUP -o ro,compress=zstd

@@ -4,10 +4,7 @@
 /usr/sbin/duperemove -hdr --hashfile=/media/DATA/Zalohy/backup/duperemove_data.hash /media/DATA/
 
 # Balance DATA
-btrfs balance start -musage=0 -v /media/DATA/
-btrfs balance start -musage=20 -v /media/DATA/
-btrfs balance start -dusage=0 -v /media/DATA/
-btrfs balance start -dusage=20 -v /media/DATA/
+btrfs balance start -musage=20 -dusage=20 -v /media/DATA/
 
 # Mount BACKUP RW
 mount -o remount,rw /media/BACKUP
@@ -19,10 +16,7 @@ rsync   --archive --delete --verbose \
 /usr/sbin/duperemove -hdr --hashfile=/media/DATA/Zalohy/backup/duperemove_backup.hash /media/BACKUP/
 
 # Balance BACKUP
-btrfs balance start -musage=0 -v /media/BACKUP/
-btrfs balance start -musage=20 -v /media/BACKUP/
-btrfs balance start -dusage=0 -v /media/BACKUP/
-btrfs balance start -dusage=20 -v /media/BACKUP/
+btrfs balance start -musage=20 -dusage=20 -v /media/BACKUP/
 
 # Let the things calm down and move BACKUP back to RO
 sleep 2m

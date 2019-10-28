@@ -9,6 +9,7 @@ btrfs balance start -musage=20 -dusage=20 -v /media/DATA/
 mount -o remount,rw /media/BACKUP
 
 rsync   --archive --delete --verbose --executability \
+        --fuzzy --delete-delay \
         --one-file-system /media/DATA/ /media/BACKUP/
 
 # Deduplication of BACKUP

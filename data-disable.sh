@@ -1,7 +1,9 @@
 #!/bin/bash
 echo "umount /media/DATA/"
 umount /media/DATA/
-echo "luksClose WD Elements 107C"
-cryptsetup luksClose /dev/mapper/luks-d4e6f546-2462-4356-8360-b5feafa41099
-echo "luksClose WD My Book 1140"
-cryptsetup luksClose /dev/mapper/luks-0110be39-192e-4e68-8ac3-2efd57ceae10
+echo "rmdir /media/DATA/"
+rmdir /media/DATA/
+echo "luksClose c61dde92-95ee-4987-b0ed-1f8ced36b52b"
+cryptsetup luksClose /dev/mapper/luks-c61dde92-95ee-4987-b0ed-1f8ced36b52b
+echo "luksClose c923dd84-b89c-4702-97e9-0a8ab4207364"
+cryptsetup luksClose /dev/mapper/luks-c923dd84-b89c-4702-97e9-0a8ab4207364

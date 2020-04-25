@@ -1,12 +1,9 @@
 #!/bin/bash
 echo "umount /media/BACKUP/"
 umount /media/BACKUP/
-
-echo "luksClose ST320005  42AS"
-cryptsetup luksClose /dev/mapper/luks-7eab0ebc-615f-4758-839a-6e8c7211ca9c
-echo "luksClose WDC WD20  EARS-00MVWB0"
-cryptsetup luksClose /dev/mapper/luks-8764dcf4-aff8-4d38-8f03-89c2a866fdbb
-echo "luksClose SAMSUNG   HD153WI"
-cryptsetup luksClose /dev/mapper/luks-2e5ecaae-9ad9-4602-9ee8-f37b11e69c9b
-echo "luksClose SAMSUNG   HD203WI"
-cryptsetup luksClose /dev/mapper/luks-7841eead-708a-4ce8-8716-7f1f0abce422
+echo "rmdir /media/BACKUP/"
+rmdir /media/BACKUP/
+echo "luksClose d5719f6e-8488-4b89-a785-a72c21099298"
+cryptsetup luksClose /dev/mapper/luks-d5719f6e-8488-4b89-a785-a72c21099298
+echo "luksClose 317d4e44-3353-4d87-9685-1235280140fa"
+cryptsetup luksClose /dev/mapper/luks-317d4e44-3353-4d87-9685-1235280140fa

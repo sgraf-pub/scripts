@@ -11,7 +11,7 @@ umount /media/DATA/Hudba
 umount /media/DATA/Serialy
 umount /media/DATA/Study
 umount /media/DATA/Temp
-umount /media/DATA/Zalohy
+#umount /media/DATA/Zalohy
 rmdir /media/DATA/0day
 rmdir /media/DATA/CDs_DVDs
 rmdir /media/DATA/Filmy
@@ -20,7 +20,7 @@ rmdir /media/DATA/Hudba
 rmdir /media/DATA/Serialy
 rmdir /media/DATA/Study
 rmdir /media/DATA/Temp
-rmdir /media/DATA/Zalohy
+#rmdir /media/DATA/Zalohy
 rmdir /media/DATA/
 
 umount /media/DATA_n2

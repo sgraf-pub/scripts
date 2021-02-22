@@ -25,8 +25,8 @@ mkdir /media/DATA/Study
 mount -o bind /media/DATA_n1/Study /media/DATA/Study
 mkdir /media/DATA/Temp
 mount -o bind /media/DATA_n1/Temp /media/DATA/Temp
-mkdir /media/DATA/Zalohy
-mount -o bind /media/DATA_n1/Zalohy /media/DATA/Zalohy
+#mkdir /media/DATA/Zalohy
+#mount -o bind /media/DATA_n1/Zalohy /media/DATA/Zalohy
 
-systemctl start minidlna
+#systemctl start minidlna
 systemctl start smb

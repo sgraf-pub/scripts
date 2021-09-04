@@ -1,8 +1,6 @@
-#!/bin/bash -ex
-umount /media/BACKUP_n1
-rmdir /media/BACKUP_n1
-cryptsetup luksClose /dev/mapper/luks-d5719f6e-8488-4b89-a785-a72c21099298
+#!/bin/bash -x
 
-umount /media/BACKUP_n2
-rmdir /media/BACKUP_n2
-cryptsetup luksClose /dev/mapper/luks-317d4e44-3353-4d87-9685-1235280140fa
+umount /media/BACKUP
+rmdir /media/BACKUP
+cryptsetup luksClose /dev/mapper/luks-8c0048d5-e630-4e90-a969-1af6e34fab70
+cryptsetup luksClose /dev/mapper/luks-7247b2f5-7e6b-48bf-b4dd-aca59c596e1a

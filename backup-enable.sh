@@ -1,9 +1,9 @@
 #!/bin/bash -ex
 read -s -p "Password: " DISK_PASS
-echo -n "$DISK_PASS" | cryptsetup luksOpen UUID=d5719f6e-8488-4b89-a785-a72c21099298 luks-d5719f6e-8488-4b89-a785-a72c21099298 -d -
-mkdir /media/BACKUP_n1
-mount /dev/mapper/luks-d5719f6e-8488-4b89-a785-a72c21099298 /media/BACKUP_n1 -o compress-force=zstd,ro
 
-echo -n "$DISK_PASS" | cryptsetup luksOpen UUID=317d4e44-3353-4d87-9685-1235280140fa luks-317d4e44-3353-4d87-9685-1235280140fa -d -
-mkdir /media/BACKUP_n2
-mount /dev/mapper/luks-317d4e44-3353-4d87-9685-1235280140fa /media/BACKUP_n2 -o compress-force=zstd,ro
+echo -n "$DISK_PASS" | cryptsetup luksOpen UUID=8c0048d5-e630-4e90-a969-1af6e34fab70 luks-8c0048d5-e630-4e90-a969-1af6e34fab70 -d -
+echo -n "$DISK_PASS" | cryptsetup luksOpen UUID=7247b2f5-7e6b-48bf-b4dd-aca59c596e1a luks-7247b2f5-7e6b-48bf-b4dd-aca59c596e1a -d -
+
+mkdir /media/BACKUP
+mount /dev/mapper/luks-7247b2f5-7e6b-48bf-b4dd-aca59c596e1a /media/BACKUP -o defaults,ro,compress-force=zstd:1
+
